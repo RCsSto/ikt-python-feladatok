@@ -25,6 +25,6 @@ cimke3.pack(anchor = "w")
 mezo3 = Entry(foablak)
 mezo3.pack(anchor = "sw") 
 
-photo = PhotoImage(file = "D:\\IKT\\ikt-python-feladatok\\light-bulb-drawing-style-isolated-vector-light-bulb-drawing-style-isolated-vector-hand-drawn-object-illustration-your-215567497.jpg")
+photo = PhotoImage(file = "D:\\IKT\\ikt-python-feladatok\\korte.jpg")
 
 foablak.mainloop()
