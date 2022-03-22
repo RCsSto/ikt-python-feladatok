@@ -3,6 +3,7 @@ foablak = Tk()
 can1 = Canvas(foablak, width = 460, height = 460, bg = "white")
 foablak.title("Harom cella")
 
+utvonal = "D:\IKT\ikt-python-feladatok"
 
 cimke1 = Label(foablak, text = "Első mező")
 cimke1.pack(anchor = "w")
@@ -25,6 +26,6 @@ cimke3.pack(anchor = "w")
 mezo3 = Entry(foablak)
 mezo3.pack(anchor = "sw") 
 
-photo = PhotoImage(file = "D:\\IKT\\ikt-python-feladatok\\korte.jpg")
+kep = PhotoImage(file = utvonal + "D:\IKT\ikt-python-feladatok\korte.jpg")
 
 foablak.mainloop()
