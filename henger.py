@@ -9,12 +9,12 @@ def szamitas():
     R = int(mezo1.get()) #sugár
     M = int(mezo2.get()) #magasság
     V = math.pi * R**2 * M #Térfogat
-
-    S = R // M #Fahenger
+    H =  #Vashenger
+    S = 16 / M #Fahenger
     mezo3.delete(0, END)
     mezo3.insert(0, "cm3 " + str(V))
     mezo4.delete(0, END)
-    mezo4.insert(0, "g " + str(V))
+    mezo4.insert(0, "g " + str(H))
     mezo5.delete(0, END)
     mezo5.insert(0, "g " + str(S))
 
