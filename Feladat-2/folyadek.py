@@ -1,33 +1,53 @@
 from tkinter import * 
+import math
+
 foablak = Tk()
 
 def liter():
     szam = int(mezo1.get())
     print(szam)
-Button1 = foablak.Button(text = 'enter', command = liter).pack()
 
-kertszamok = int(input("Hany liter borunk van?"))
+def callback():
+    global buttonClicked
+    buttonClicked = not buttonClicked 
 
+buttonClicked = False
 hordo = 100
 
-cimke = Label(foablak, text = "Hány liter borunk van?")
-cimke.pack(anchor = "center")
+szoveg = Label(foablak, text = "Van egy henger alakú hordónk, melybe nem tudjuk, hogy belefér-e a rendelkezésre álló bor.")
+szoveg.grid(row = 0, column = 0)
+
+cimke = Label(foablak, text = "Bor mennyiség: ")
+cimke.grid(row = 1, column = 0)
 
 mezo1 = Entry(foablak)
-mezo1.pack(anchor = "center")
+mezo1.grid(row = 1, column = 1)
 
-cimke1 = Label(foablak, text = ("A hordóba", hordo, " liter folyadék fér"))
-cimke1.pack(anchor = "center")
+elval = Label(foablak, text = " ")
+elval.grid(row = 1, column = 2)
 
+elval1 = Label(foablak, text = " ")
+elval1.grid(row = 2, column = 0)
 
-cimke2 = Label(foablak, text = " ")
-cimke2.pack(anchor = "center")
+cimke1 = Label(foablak, text = "Hordó magassága: ")
+cimke1.grid(row = 3, column = 0)
 
-if hordo > cimke: 
-    cimke3 = Label(foablak, text = "Belefér a bor!")
-    cimke3.pack(anchor = "center")
-else:
-    cimke4 = Label(foablak, text = "Nem fér bele a bor!")
-    cimke4.pack(anchor = "center")
+mezo2 = Entry(foablak)
+mezo2.grid(row = 3, column = 1)
+
+elval2 = Label(foablak, text = " ")
+elval2.grid(row = 4, column = 0)
+
+cimke2 = Label(foablak, text = "Mi a hordó sugara?")
+cimke2.grid(row = 5, column = 0)
+
+mezo3 = Entry(foablak)
+mezo3.grid(row = 5, column = 1)
+
+elval3 = Label(foablak, text = " ")
+elval3.grid(row = 4, column = 0)
+
+cimke3 = Label(foablak, text = ("A hordóba", hordo, " liter folyadék fér"))
+cimke3.grid(row = 6, column = 0)
 
 foablak.mainloop()
