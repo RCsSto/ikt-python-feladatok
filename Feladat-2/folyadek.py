@@ -76,7 +76,4 @@ mezo5.grid(row = 8, column = 3)
 mezo6 = Entry(foablak)
 mezo6.grid(row = 8, column = 5
 
-
-
-
 foablak.mainloop()
