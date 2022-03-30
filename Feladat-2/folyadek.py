@@ -3,16 +3,27 @@ import math
 
 foablak = Tk()
 
+
+#def
 def liter():
-    szam = int(mezo1.get())
-    print(szam)
+    a = int(mezo1.get())
+    b = int(mezo2.get())
+    c = int(mezo3.get())
 
-def callback():
-    global buttonClicked
-    buttonClicked = not buttonClicked 
+    N = math.pi * b * b * c
+    R = N / 100
 
-buttonClicked = False
-hordo = 100
+
+    PLNRW = d / a
+    mezo5.delete(0, END)
+    mezo5.insert(0, str(s)+" bor")
+    mezo6.delete(0, END)
+    mezo6.insert(0, str()+" igen")
+
+    mezo4.delete(0, END)
+    mezo4.insert(0, str(PLNRW)+" liter")
+
+#Kód
 
 szoveg = Label(foablak, text = "Van egy henger alakú hordónk, melybe nem tudjuk, hogy belefér-e a rendelkezésre álló bor.")
 szoveg.grid(row = 0, column = 0)
@@ -47,7 +58,25 @@ mezo3.grid(row = 5, column = 1)
 elval3 = Label(foablak, text = " ")
 elval3.grid(row = 4, column = 0)
 
-cimke3 = Label(foablak, text = ("A hordóba", hordo, " liter folyadék fér"))
+cimke3 = Label(foablak, text = ("A hordóba 100 liter folyadék fér"))
 cimke3.grid(row = 6, column = 0)
+
+elval3 = Label(foablak, text = " ")
+elval3.grid(row = 7, column = 0)
+
+mezo4 = Entry(foablak)
+mezo4.grid(row = 8, column = 1)
+
+gomb = Button(foablak, text="Kiszámítás", command=liter)
+gomb.grid(row = 7, column = 1)
+
+mezo5 = Entry(foablak)
+mezo5.grid(row = 8, column = 3)
+
+mezo6 = Entry(foablak)
+mezo6.grid(row = 8, column = 5
+
+
+
 
 foablak.mainloop()
