@@ -5,12 +5,15 @@ ablak = Tk()
 ablak.title("Henger")
 ablak.geometry("300x300")
 
+vas = 7.384
+fa = 0.43
+
 def szamitas():
     R = int(mezo1.get()) #sugár
     M = int(mezo2.get()) #magasság
     V = math.pi * R**2 * M #Térfogat
-    H =  #Vashenger
-    S = 16 / M #Fahenger
+    H =  vas * V
+    S = fa * V
     mezo3.delete(0, END)
     mezo3.insert(0, "cm3 " + str(V))
     mezo4.delete(0, END)
