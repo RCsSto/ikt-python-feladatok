@@ -15,6 +15,7 @@ def liter():
     mezo5.delete(0, END)
     mezo5.insert(0, str(mennyiseg)+" liter borunk van")
     mezo6.delete(0, END)
+    
     if mennyiseg <= 100:
         mezo6.insert(0, str()+" Belefér-e? Igen")
     else:
