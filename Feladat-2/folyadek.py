@@ -14,7 +14,7 @@ def liter():
     R = N / 100
 
 
-    PLNRW = d / a
+    M = d / a
     mezo5.delete(0, END)
     mezo5.insert(0, str(s)+" bor")
     mezo6.delete(0, END)
@@ -74,6 +74,6 @@ mezo5 = Entry(foablak)
 mezo5.grid(row = 8, column = 3)
 
 mezo6 = Entry(foablak)
-mezo6.grid(row = 8, column = 5
+mezo6.grid(row = 8, column = 5)
 
 foablak.mainloop()
