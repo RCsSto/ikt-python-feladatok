@@ -7,7 +7,7 @@ foablak = Tk()
 def ablak():
     ablak_egy = Toplevel(foablak)
     uzenet_egy = Message(ablak_egy, text = "Készítette: Gipsz Jakab\n Piripócs\n 2009.06.04", width = 300)
-    gomb_egy = Button(foablak, text = "Kilépés", command = ablak_egy.destroy)
+    gomb_egy = Button(foablak, text = "Kilépés", command = foablak.destroy)
     uzenet_egy.pack()
     gomb_egy.pack()
 
