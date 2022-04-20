@@ -2,12 +2,6 @@
 
 from tkinter import * 
 
-# Foablak 
-
-foablak = Tk()
-foablak.title("A téglatest adatai")
-foablak.minsize(width = 300, height = 100)
-
 # Fontosabb Def-ek
 
 def nevjegy():
@@ -20,8 +14,9 @@ def nevjegy():
 
     ablak_egy.mainloop()
 
+# Def és Widgetek és Mellékablakok
 
-# Def
+    # Felszín 
 
 def felszin():
     def szamit():
@@ -38,6 +33,25 @@ def felszin():
             mezo_negy.delete(0, END)
             mezo_negy.insert(0, str(felszin))
 
+ablak_ketto = Toplevel(foablak)
+ablak_ketto.title("A téglatest felszíne")
+ablak_ketto.minsize(width = 300, height = 300)
+
+szoveg_egy = Label(ablak_ketto, text = "a")
+szoveg_ketto = Label(ablak_ketto, text = "b")
+szoveg_harom = Label(ablak_ketto, text = "c")
+szoveg_negy = Label(ablak_ketto, text = "Eredmény: ")
+
+gomb_egy = Button(ablak_ketto, text = "Kiszámítás", command = felszin)
+
+mezo_egy = Entry(ablak_ketto)
+mezo_ketto = Entry(ablak_ketto)
+mezo_harom = Entry(ablak_ketto)
+mezo_negy = Entry(ablak_ketto)
+
+ablak_ketto.mainloop()
+
+    # Térfogat
 
 def terfogat():
     def szamit():
@@ -53,6 +67,30 @@ def terfogat():
         else:
             mezo_negy.delete(0, END)
             mezo_negy.insert(0, str(terfogat))
+
+ablak_ketto = Toplevel(foablak)
+ablak_ketto.title("A téglatest térfogata")
+ablak_ketto.minsize(width = 300, height = 300)
+
+szoveg_egy = Label(ablak_ketto, text = "a")
+szoveg_ketto = Label(ablak_ketto, text = "b")
+szoveg_harom = Label(ablak_ketto, text = "c")
+szoveg_negy = Label(ablak_ketto, text = "Eredmény: ")
+
+gomb_egy = Button(ablak_ketto, text = "Kiszámítás", command = terfogat)
+
+mezo_egy = Entry(ablak_ketto)
+mezo_ketto = Entry(ablak_ketto)
+mezo_harom = Entry(ablak_ketto)
+mezo_negy = Entry(ablak_ketto)
+
+ablak_ketto.mainloop()
+
+# Foablak 
+
+foablak = Tk()
+foablak.title("A téglatest adatai")
+foablak.minsize(width = 300, height = 100)
 
 # Menu
 
@@ -74,47 +112,6 @@ teglatest = Menu(menu_ketto)
 teglatest.add_command(label = "Felszín", command = felszin, underline = 0)
 teglatest.add_command(label = "Térfogat", command = terfogat, underline = 0)
 menu_ketto.config(menu = teglatest)
-
-# Mellékablakok
-
-ablak_ketto = Toplevel(foablak)
-ablak_ketto.title("A téglatest felszíne")
-ablak_ketto.minsize(width = 300, height = 300)
-
-ablak_ketto = Toplevel(foablak)
-ablak_ketto.title("A téglatest térfogata")
-ablak_ketto.minsize(width = 300, height = 300)
-
-# Widgetek
-
-    # Felszín
-    
-szoveg_egy = Label(ablak_ketto, text = "a")
-szoveg_ketto = Label(ablak_ketto, text = "b")
-szoveg_harom = Label(ablak_ketto, text = "c")
-szoveg_negy = Label(ablak_ketto, text = "Eredmény: ")
-
-gomb_egy = Button(ablak_ketto, text = "Kiszámítás", command = felszin)
-
-mezo_egy = Entry(ablak_ketto)
-mezo_ketto = Entry(ablak_ketto)
-mezo_harom = Entry(ablak_ketto)
-mezo_negy = Entry(ablak_ketto)
-
-
-    # Térfogat
-
-szoveg_egy = Label(ablak_ketto, text = "a")
-szoveg_ketto = Label(ablak_ketto, text = "b")
-szoveg_harom = Label(ablak_ketto, text = "c")
-szoveg_negy = Label(ablak_ketto, text = "Eredmény: ")
-
-gomb_egy = Button(ablak_ketto, text = "Kiszámítás", command = terfogat)
-
-mezo_egy = Entry(ablak_ketto)
-mezo_ketto = Entry(ablak_ketto)
-mezo_harom = Entry(ablak_ketto)
-mezo_negy = Entry(ablak_ketto)
 
 # Poziciónálás
 
