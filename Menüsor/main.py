@@ -12,7 +12,7 @@ def nevjegy():
     uzenet_egy.pack()
     gomb_egy.pack()
 
-    ablak_egy.mainloop()
+    ablak_egy.mainloop() 
 
 # Def és Widgetek és Mellékablakok
 
